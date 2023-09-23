@@ -1,81 +1,78 @@
-function cubeNumber(number) {
-    if( typeof number !=="number")
-    {
-        return "please give me a number";
+// function cubeNumber(number) {
+//     if( typeof number !=="number")
+//     {
+//         return "please give me a number";
 
-    }
+//     }
 
-    return number**3;
-
-
-
-}
-
-function matchFinder(string1, string2) {
-
-    if( typeof string1 !=="string" && string2 !=="string")
-    {
-        return "please provide me a string"
-
-    }
-
-    if(string1.includes(string2))
-    {
-        return true
-    }
-    else
-    {
-        return false
-
-    }
-}
+//     return number**3;
 
 
-function canPay(changeArray, totalDue) {
+
+// }
+
+// function matchFinder(string1, string2) {
+
+//     if( typeof string1 !=="string" && string2 !=="string")
+//     {
+//         return "please provide me a string"
+
+//     }
+
+//     if(string1.includes(string2))
+//     {
+//         return true
+//     }
+//     else
+//     {
+//         return false
+
+//     }
+// }
 
 
-    if(changeArray.length==0)
-    {
-        return "Give me an element"
+// function canPay(changeArray, totalDue) {
 
-    }
 
-    let sum=0;
-    for(let item of changeArray)
-    {
+//     if(changeArray.length==0)
+//     {
+//         return "Give me an element"
+
+//     }
+
+//     let sum=0;
+//     for(let item of changeArray)
+//     {
       
-        sum= sum+item;   
-    }
+//         sum= sum+item;   
+//     }
 
-    if(sum >= totalDue)
-    {
-        return true;
+//     if(sum >= totalDue)
+//     {
+//         return true;
 
-    }
-    else
-    {
-        return false;
-    }
+//     }
+//     else
+//     {
+//         return false;
+//     }
 
 
-}
+// }
 
 function findAddress(obj){
     if(typeof obj !== "object"){
         return "please provide me a valid object"
     }else{
+        
 
-        for (const key in obj) {
-            if (Object.hasOwnProperty.call(obj, key)) {
-                const element = obj[key];
-                
-            }
-        }
-        const  street=obj. street || "__";
+        const  street=obj.street || "__";
         const house= obj.house || "__";
-        const  society = obj. society || "__";
+        const  society = obj.society || "__";
       
-        return `${ street}, ${ house},${ society}`;
+        return " "+obj.street+", "+obj.house+", "+obj.society;
+        
+
     
        
     }
@@ -83,45 +80,55 @@ function findAddress(obj){
 
 }
 
-function sortMaker(arr) {
+const person = {
+    street:10,
+    house: 25,
+    society: "Rajshahi",
+    
+}
 
-    for(let i=0;i<arr.length;i++)
-    {
-      if(arr[i]<0)
-      {
-       return "invalid input"
-      }
-    }
+console.log(findAddress(person))
+
+
+// function sortMaker(arr) {
+
+//     for(let i=0;i<arr.length;i++)
+//     {
+//       if(arr[i]<0)
+//       {
+//        return "invalid input"
+//       }
+//     }
   
-      let largest=arr[0]
+//       let largest=arr[0]
   
-      for(let i=1;i<arr.length;i++)
-      {
-          let currentLarge=arr[i]
-          if(currentLarge==largest)
-          {
-              return "equal"
+//       for(let i=1;i<arr.length;i++)
+//       {
+//           let currentLarge=arr[i]
+//           if(currentLarge==largest)
+//           {
+//               return "equal"
   
-          }
-          if(currentLarge>largest)
-          {
-              let temp =largest
-              largest=currentLarge
-              currentLarge=temp
-              return [largest,temp];
+//           }
+//           if(currentLarge>largest)
+//           {
+//               let temp =largest
+//               largest=currentLarge
+//               currentLarge=temp
+//               return [largest,temp];
   
-          }
+//           }
   
-          else{
-              return arr
-          }
-      }
+//           else{
+//               return arr
+//           }
+//       }
   
    
      
-  }
+//   }
   
-  console.log(sortMaker([7,9]))
+//   console.log(sortMaker([7,9]))
 
 
 

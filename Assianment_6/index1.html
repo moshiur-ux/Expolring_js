@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Questions</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h2 class="text-center mt-20 text-9xl">Blog Questions</h2>
+
+    <div class="">
+      <h2 class="ml-20 mt-10 text-4xl">
+        1. Discuss the scope of var, let, and const
+      </h2>
+
+      <p class="m-10">
+        The scope of variables in JavaScript is determined by where the variable
+        is declared. There are three main variable declaration keywords: var,
+        let, and const, and they have different scoping rules. Let's discuss the
+        scope of each: var: Variables declared using var have function scope or
+        global scope. This means that they are scoped to the function in which
+        they are declared or to the global scope if declared outside any
+        function. They are also subject to a phenomenon called "hoisting," where
+        the declaration of the variable is moved to the top of its scope during
+        compilation, but the assignment remains in place. let: Variables
+        declared using let have block scope. They are scoped to the nearest
+        enclosing block (usually a pair of curly braces {}), whether it's a
+        function, loop, or an if statement. Variables declared with let are not
+        hoisted to the top of their scope like var, which leads to more
+        predictable behavior. const: Variables declared using const also have
+        block scope, just like let. However, they have an additional
+        characteristic: they are constant and cannot be reassigned after their
+        initial assignment. This makes const useful for defining values that
+        should remain constant throughout their scope. In modern JavaScript
+        development, it's generally recommended to use let and const over var
+        due to their more predictable scoping rules. Use const for values that
+        shouldn't change, and let for values that may change within their scope.
+        This approach helps prevent unintended variable mutations and improves
+        code readability and maintainability.
+      </p>
+    </div>
+    <div class="">
+      <h2 class="ml-20 mt-10 text-4xl">
+        2.  Tell us the use cases of null and undefined
+      </h2>
+
+      <p class="m-10">
+        Both null and undefined are special values in JavaScript that represent the absence of a value. While they are often used interchangeably in some contexts, they have distinct use cases.
+
+        Undefined:
+        
+        Variable Initialization: If you declare a variable without assigning a value to it, the variable will have the value undefined by default.
+        Function Parameters: If a function is called with fewer arguments than declared parameters, the missing parameters will have the value undefined.
+        Return Value: If a function doesn't explicitly return a value, it will implicitly return undefined.
+        Property Access: Accessing an object property that doesn't exist will result in the value undefined.
+        Implicit Conversion: Operations that involve undefined values may result in unexpected behavior, like NaN in numeric calculations or concatenation with strings.
+        Null:
+        
+        Explicit Absence of Value: null is often used to explicitly represent the absence of a value or to indicate that a variable should be empty.
+        As an Assignment: You can set a variable to null to indicate that it no longer holds a value, and it's intentionally empty.
+        Comparison: null can be used in comparisons to check if a value is missing or intentionally set to null.
+        Use Cases:
+        
+        When you want to indicate that a variable intentionally has no value, you can use null.
+        When you encounter a missing value due to an operation or an expected value that hasn't been provided, you can use undefined.
+        null can be used to reset variables or properties to an explicitly empty state.
+        In many cases, both null and undefined are used interchangeably to represent the absence of a value, but it's important to be aware of their distinctions and to choose the appropriate one for your specific use case. If you're not sure which one to use, consider the context and purpose of the value you're representing.
+        
+      </p>
+    </div>
+    <div class="">
+      <h2 class="ml-20 mt-10 text-4xl">
+        3.What do you mean by REST API?
+      </h2>
+
+      <p class="m-10">
+        REST stands for Representational State Transfer. It is an architectural style and a set of constraints used to design networked applications, particularly web services. A RESTful API (Application Programming Interface) is a type of web API that adheres to the principles of REST. REST APIs are widely used for building scalable and maintainable web services that can be consumed by various clients, including web browsers, mobile applications, and other servers.
+
+Key Principles of REST:
+
+Client-Server Architecture: REST separates the client (user interface) from the server (data storage and processing), allowing them to evolve independently.
+
+Stateless: Each request from a client to the server must contain all the information needed to understand and process the request. The server should not store any client state between requests.
+
+Cacheability: Responses from the server can be cached by clients to improve performance. Cache directives in the response headers control caching behavior.
+
+Uniform Interface: REST APIs use a consistent set of methods (HTTP verbs) to interact with resources. These methods include GET (retrieve), POST (create), PUT (update), and DELETE (remove).
+
+Layered System: A client can interact with the server without needing to know about intermediary components, such as load balancers or proxies, which can improve scalability.
+
+Code on Demand (Optional): Servers can provide executable code to clients on demand, such as JavaScript in a browser.
+
+Benefits of REST APIs:
+
+Simplicity: REST APIs are simple to understand and use due to their adherence to common HTTP methods and status codes.
+Scalability: The stateless nature of REST allows for easy scaling of resources and services.
+Flexibility: Clients and servers can evolve independently as long as they adhere to the agreed-upon interface.
+Compatibility: REST APIs can be consumed by a wide range of clients, including web browsers, mobile apps, and more.
+Caching: Caching can improve performance by reducing the need to request the same data repeatedly.
+REST APIs are commonly used to build various web services, including social media platforms, e-commerce websites, data-driven applications, and more. They leverage the HTTP protocol and its methods to provide a standardized way for clients to interact with resources on the server.
+      </p>
+    </div>
+  </body>
+</html>

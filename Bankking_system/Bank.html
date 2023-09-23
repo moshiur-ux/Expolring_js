@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bap ar bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+
+<body >
+   <header>
+    <h1 class="text-5xl text-center mt-6">Welcome to your
+        <span class=" font-semibold text-violet-600">Bapp Er Bank</span>
+
+    </h1>
+   </header>
+   <main>
+    <section class="bg-blue-100 w-9/2 mx-auto mt-12 p-8">
+        <h3 class="text-3xl mb-4 font-medium">Please Login</h3>
+        <div>
+            <input class="w-9/2 block mb-2 px-4" type="email" placeholder="Your Email" name="" id="user-email">
+            <input class="w-9/2 block mb-2 px-4" type="password" placeholder="your password" name="" id="user-password">
+            <button id="btn-submit" class="bg-amber-600 hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg"> Submit</button>
+        </div>
+    </section>
+</main>
+
+   <script src="js/login.js"></script>
+</body>
+
+</html>
